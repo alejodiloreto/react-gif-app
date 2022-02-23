@@ -11,4 +11,4 @@
 
 ## ⚒ Deploy
 
-👉 https://gif-aplication.netlify.app/
+👉 https://react-gif-app.alejodiloreto.vercel.app/
