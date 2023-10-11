@@ -1,8 +1,14 @@
 import { useEffect, useState } from 'react';
 import { getGifs } from '../helpers/getGifs';
+import { Gif } from '../interfaces/gif';
 
-export const useFetchGifs = (category) => {
-  const [state, setState] = useState({ data: [], loading: true });
+interface State {
+  data: Gif[];
+  loading: boolean;
+}
+
+export const useFetchGifs = (category: string) => {
+  const [state, setState] = useState<State>({ data: [], loading: true });
 
   useEffect(() => {
     getGifs(category).then((item) => {
@@ -13,5 +19,5 @@ export const useFetchGifs = (category) => {
     });
   }, [category]);
 
-  return state;
+  return state
 };
